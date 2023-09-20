@@ -1,5 +1,5 @@
 // Part of Fox Cache: https://foxcache.machinezoo.com
-module com.machinezoo.pmdata {
+module com.machinezoo.foxcache {
     exports com.machinezoo.foxcache;
     requires com.machinezoo.stagean;
     /*
