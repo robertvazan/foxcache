@@ -27,7 +27,7 @@ See [homepage](https://foxcache.machinezoo.com/).
 
 * [Homepage](https://foxcache.machinezoo.com/)
 
-There is no javadoc yet. See [source code](src/main/java/com/machinezoo/pmdata) for available APIs.
+There is no javadoc yet. See [source code](src/main/java/com/machinezoo/foxcache) for available APIs.
 
 ## Feedback
 
