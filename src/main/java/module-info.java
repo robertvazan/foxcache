@@ -21,6 +21,7 @@ module com.machinezoo.foxcache {
     requires transitive com.esotericsoftware.kryo;
     requires com.google.gson;
     requires one.util.streamex;
+    requires com.google.common;
     requires org.objenesis;
     requires org.slf4j;
     /*
