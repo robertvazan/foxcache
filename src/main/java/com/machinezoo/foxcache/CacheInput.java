@@ -166,6 +166,8 @@ public class CacheInput {
             frozen = true;
         }
     }
+    @Override public boolean equals(Object obj) { return obj instanceof CacheInput other && hash().equals(other.hash()); }
+    @Override public int hashCode() { return hash().hashCode(); }
     static CacheInput link(CacheOwner owner) {
         var input = new CacheInput();
         try (var recording = input.record()) {
