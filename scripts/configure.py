@@ -24,8 +24,9 @@ class Project(scaffold.Java):
         yield self.use_streamex()
         yield self.use_guava()
         yield self.use_commons_lang()
+        yield self.use_commons_io()
         # Used to serialize cache content output.
-        yield self.use('com.esotericsoftware:kryo:5.2.0')
+        yield self.use('com.esotericsoftware:kryo:5.5.0')
         yield self.use_gson()
         yield self.use_junit()
         yield self.use_slf4j_test()

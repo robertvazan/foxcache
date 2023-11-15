@@ -23,6 +23,7 @@ module com.machinezoo.foxcache {
     requires one.util.streamex;
     requires com.google.common;
     requires org.apache.commons.lang3;
+    requires org.apache.commons.io;
     requires org.objenesis;
     requires org.slf4j;
     /*
