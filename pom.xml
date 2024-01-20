@@ -5,7 +5,7 @@
 
 	<groupId>com.machinezoo.foxcache</groupId>
 	<artifactId>foxcache</artifactId>
-	<version>0.1.4</version>
+	<version>0.1.5</version>
 
 	<name>Fox Cache</name>
 	<description>Reactive persistent cache for applications based on Hookless and especially PushMode.</description>
