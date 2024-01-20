@@ -161,12 +161,17 @@ public class CacheReport {
                     entry.status = CacheStatus.RUNNING;
             } else if (entry.input.blocking())
                 entry.status = CacheStatus.LINKING;
-            else if (entry.snapshot == null)
+            else if (entry.input.exception() != null) {
+                if (EmptyCacheException.caused(entry.input.exception()))
+                    entry.status = CacheStatus.LINKING;
+                else
+                    entry.status = CacheStatus.FAILED;
+            } else if (entry.snapshot == null)
                 entry.status = CacheStatus.EMPTY;
             else if (entry.snapshot.cancelled()
                 && ReactiveDuration.between(entry.snapshot.refreshed(), ReactiveInstant.now()).compareTo(Duration.ofSeconds(3)) < 0)
                 entry.status = CacheStatus.JUST_CANCELLED;
-            else if (entry.input.exception() != null || entry.snapshot.exception() != null)
+            else if (entry.snapshot.exception() != null)
                 entry.status = CacheStatus.FAILED;
             else if (entry.snapshot.hash() == null)
                 entry.status = CacheStatus.EMPTY;
