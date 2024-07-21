@@ -15,8 +15,10 @@ import com.machinezoo.meerkatwidgets.*;
 import com.machinezoo.pmsite.*;
 import com.machinezoo.pmsite.utils.*;
 import com.machinezoo.pushmode.dom.*;
+import com.machinezoo.stagean.*;
 import one.util.streamex.*;
 
+@CodeIssue("Cache refresh does not update refreshed timestamp? It shows up after app restart though.")
 public class CacheReport {
     private CacheInput input = new CacheInput();
     public CacheReport input(CacheInput input) {
